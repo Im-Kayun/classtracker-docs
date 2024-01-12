@@ -1,0 +1,29 @@
+# Profile
+
+## /changeProfilePassword
+
+Update the profile password from the current user.
+
+- HTTP Method: `POST`
+- Parameters:
+    - current_pasword: `string`
+    - new_password: `string`
+- Returns: `Code 200`
+
+## /updateProfileImage
+
+Update the profile image from the current user.
+
+- HTTP Method: `POST`
+- Parameters:
+    - image: `file`
+- Returns: `Code 200`
+
+## /getProfileImage/userID
+
+Returns the profile image from a specific user.
+
+- HTTP Method: `GET, POST`
+- Parameters:
+    - userID: `string`
+- Returns: `image`

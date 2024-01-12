@@ -1,0 +1,87 @@
+import { Tabs, Tab } from 'nextra-theme-docs';
+
+# Authentication
+
+## /@me
+
+Returns all useful data related to the logged-in user. The returned data depends on user type.
+
+- HTTP Method: `GET`
+- Parameters: `None`
+<Tabs items={['Admin', 'Student', 'Teacher']}>
+  <Tab>
+    - Returns: `JSON`
+        - id: `string`
+        - email: `string`
+        - name: `string`
+        - surname: `string`
+        - address: `string`
+        - birthdate: `date`
+        - image: `string`
+  </Tab>
+  <Tab>
+    - Returns: `JSON`
+        - id: `string`
+        - email: `string`
+        - name: `string`
+        - surname: `string`
+        - address: `string`
+        - birthdate: `date`
+        - image: `string`
+        - userType: `string`
+        - pNumber: `string`
+        - parentName: `string`
+        - parentEmail: `string`
+        - parentAddress: `string`
+        - parentPhone: `string`
+        - className: `string`
+        - classType: `integer`
+        - classHeadTeacher: `string`
+  </Tab>
+  <Tab>
+    - Returns: `JSON`
+        - id: `string`
+        - email: `string`
+        - name: `string`
+        - surname: `string`
+        - address: `string`
+        - birthdate: `date`
+        - image: `string`
+        - userType: `string`
+        - contact: `string`
+  </Tab>
+</Tabs>
+
+## /register
+
+Creates a new user, but without any specific type. Used only for admin creation.
+
+- HTTP Method: `POST`
+- Parameters:
+    - name: `string`
+    - surname: `string`
+    - email: `string`
+    - password: `string`
+- Returns: `JSON`
+    - id: `string`
+    - email: `string`
+
+## /login
+
+Login in the platform.
+
+- HTTP Method: `POST`
+- Parameters:
+    - email: `string`
+    - password: `string`
+- Returns: `JSON`
+    - id: `string`
+    - email: `string`
+
+## /logout
+
+Logout the current user.
+
+- HTTP Method: `POST`
+- Parameters: `None`
+- Returns: `Code 200`

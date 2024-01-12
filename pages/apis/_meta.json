@@ -1,0 +1,12 @@
+{
+  "auth": "Authentication",
+  "calendar": "Calendar",
+  "class": "Class",
+  "classroom": "Classroom",
+  "profile": "Profile",
+  "student": "Student",
+  "subject": "Subject",
+  "summary": "Summary",
+  "teacher": "Teacher",
+  "user": "User"
+}

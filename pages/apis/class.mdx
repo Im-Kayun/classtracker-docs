@@ -1,0 +1,85 @@
+import { Tabs, Tab } from 'nextra-theme-docs';
+
+# Class
+
+## /getClassSubjects
+
+Returns all the subjects for a specific class.
+
+- HTTP Method: `POST`
+- Parameters:
+    - class_ID: `string`
+- Returns: `JSON`
+    - id: `integer`
+    - name: `string`
+
+## /getClasses
+
+Returns all the classes.
+
+- HTTP Method: `POST`
+- Parameters: `None`
+- Returns: `JSON`
+    - id: `integer`
+    - label: `string`
+    - grade: `integer`
+    - name: `string`
+
+## /getClassesCount
+
+<Tabs items={['Admin', 'Teacher']}>
+  <Tab>
+    Returns the total of classes.
+  </Tab>
+  <Tab>
+    Returns the total number of classes the teacher is teaching.
+  </Tab>
+</Tabs>
+- HTTP Method: `GET`
+- Parameters: `None`
+- Returns: `number`
+
+## /getClassStudents
+
+Returns information about all the students in a specific class.
+
+- HTTP Method: `POST`
+- Parameters:
+    - class_id: `integer`
+- Returns: `JSON`
+    - id: `integer`
+    - name: `string`
+    - surname: `string`
+
+## /createClass
+
+Create a new Class.
+
+- HTTP Method: `POST`
+- Parameters:
+    - label: `string`
+    - grade: `integer`
+    - type_id: `integer`
+    - head_teacher: `integer`
+- Returns: `Code 200`
+
+## /deleteClass/class_id
+
+Delete a specific class.
+
+- HTTP Method: `DELETE`
+- Parameters:
+    - class_id: `integer`
+- Returns: `Code 200`
+
+## /editClass/class_id
+
+Edit information about a specific class.
+
+- HTTP Method: `POST`
+- Parameters:
+    - label: `string`
+    - grade: `integer`
+    - type_id: `integer`
+    - head_teacher: `integer`
+- Returns: `Code 200`

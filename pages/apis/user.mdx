@@ -1,0 +1,24 @@
+# User
+
+## /deleteUser/user_id
+
+Delete users who don't have a specific type.
+
+- HTTP Method: `DELETE`
+- Parameters:
+    - user_id: `string`
+- Returns: `Code 200`
+
+## /editUser/user_id
+
+Change general user information, without having to change type-related information.
+
+- HTTP Method: `POST`
+- Parameters:
+    - name: `string`
+    - surname: `string`
+    - email: `string`
+    - address: `string`
+    - birthdate: `date`
+    - state: `string`
+- Returns: `Code 200`
